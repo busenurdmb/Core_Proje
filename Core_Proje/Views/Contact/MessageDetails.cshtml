@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.Message
+@{
+    ViewData["Title"] = "MessageDetails";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-description">Mesaj Detay Sayfası </p>
+            <form class="forms-sample">
+                @*<form class="form-group">*@
+
+
+                    @Html.HiddenFor(x => x.MessageID, new { @class = "form-control" })
+                    <br />
+                    @Html.Label("Gönderen Adı")
+                    @Html.TextAreaFor(x => x.Name, new { @class = "form-control" })
+                    <br />
+                    @Html.Label("Gönderen Mail")
+                    @Html.TextAreaFor(x => x.Mail, new { @class = "form-control" })
+                    <br />
+                    @Html.Label("Tarih")
+                    @Html.TextAreaFor(x => x.Date, new { @class = "form-control" })
+                    <br />
+                    @Html.Label("Mesaj")
+                    @Html.TextAreaFor(x => x.Content, 10, 3, new { @class = "form-control" })
+                    <br />
+                    <a asp-action="Index" class="btn btn-primary">İletişim Sayfası</a>
+                @*</form>*@
+            </form>
+        </div>
+    </div>
+</div>
