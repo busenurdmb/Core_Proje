@@ -12,7 +12,7 @@ namespace Core_Proje.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        //deneme
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
